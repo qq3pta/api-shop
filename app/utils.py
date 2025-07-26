@@ -16,7 +16,6 @@ def fetch_products():
     return combined
 
 def upsert_products(session: Session, data: list):
-    # Полностью перезаписываем
     session.query(Product).delete()
     session.query(Category).delete()
     session.commit()
